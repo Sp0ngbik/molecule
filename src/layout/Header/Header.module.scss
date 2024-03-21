@@ -47,21 +47,19 @@
 }
 
 @media screen and (max-width: 1024px) {
-
-  .headerLinks h2 {
-    margin: 0 10px;
+  .headerMenu {
+    display: flex;
+  }
+  .headerLinks {
+    display: none;
   }
   .headerFirstSite {
     padding: 0 10px;
   }
 }
 @media screen and (max-width: 540px) {
-  .headerLinks {
-    display: none;
-  }
-  .headerMenu {
-    display: flex;
-  }
+
+
   .headerWrapper {
     padding: 0 10px 0;
     & button{

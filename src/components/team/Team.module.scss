@@ -1,0 +1,85 @@
+@import "../../styles/mixin";
+.teamInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  padding: 128px 80px;
+  width: 100%;
+  grid-gap: 115px;
+  max-width: 1280px;
+  // height: 592px;
+}
+.teamInfoLeftBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.teamInfoLeftBlock h4 {
+  @include labelContainer;
+  color: white;
+  width: 93px;
+  background-color: rgba(121, 78, 255, 0.8);
+  border: 2px solid #794eff;
+}
+.teamInfoLeftBlock h3 {
+  font-size: 32px;
+}
+.teamInfoLeftBlock h3 span {
+  color: #794eff;
+}
+.teamInfoLeftBlock div {
+  font-size: 18px;
+  padding: 0 0 29px 0;
+}
+.teamInfoLeftBlock button {
+  width: 141px;
+  color: white;
+  border: none;
+  height: 42px;
+  background-color: #794eff;
+  border-radius: 6px;
+}
+.teamInfoLeftBlock button:hover {
+  @include purpleButtonHover;
+}
+.teamImages {
+  display: grid;
+  grid-gap: 16px;
+}
+.teamImageFirstBlock img {
+  max-width: 288px;
+  object-fit: cover;
+  width: 100%;
+}
+.teamImageFirstBlock img {
+  padding: 0 0 16px;
+  width: 100%;
+}
+.teamImageSecondBlock {
+  display: flex;
+  align-items: center;
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+@media screen and (max-width: 1024px) {
+  .teamInfo {
+    padding: 0 20px;
+    margin: 40px 0;
+    grid-gap: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 540px) {
+  .teamInfo {
+    grid-template-rows: 1fr;
+  }
+  .teamInfoLeftBlock {
+    padding: 0 0 30px;
+  }
+  .teamImages {
+    display: flex;
+    flex-direction: column;
+  }
+}

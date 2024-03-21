@@ -1,5 +1,5 @@
 import style from "../Footer/Footer.module.scss";
-import {firstSiteConfig} from "../../page/utils/imageConfig.ts";
+import {firstSiteConfig} from "../../utils/imageConfig.ts";
 
 
 const Footer = () => {

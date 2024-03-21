@@ -1,0 +1,57 @@
+.creators {
+  position: relative;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+.slideLogoDiscr {
+  margin: 0 0 34px 0;
+}
+
+.arrowsSlider_backward {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 46%;
+  left: 10%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.arrowsSlider_forward{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  right: 10%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.creatorsDescription {
+  padding: 128px 80px 192px;
+  text-align: center;
+
+}
+
+.sliderDots {
+  display: flex;
+  margin: 23px 0;
+  justify-content: center;
+}
+
+.sliderDots .dotActive {
+  background-color: #222;
+}
+
+.sliderDots button {
+  border: none;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: rgba(34, 34, 34, 0.4);
+  margin: 0 6px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

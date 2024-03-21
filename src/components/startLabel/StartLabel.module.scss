@@ -1,0 +1,47 @@
+@import "../../styles/mixin";
+.startDesign {
+  background-color: #794eff;
+  height: 256px;
+  width: 100%;
+}
+.startDesign > div {
+  display: flex;
+  padding: 60px 80px 0;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.startDesign span {
+  color: #fff;
+  font-size: 18px;
+}
+.startDesign h3 {
+  color: #fff;
+  font-size: 56px;
+  margin: 0 0 14px 0;
+}
+.startDesign button {
+  width: 154px;
+  height: 55px;
+  margin: 51px 0 21px 0;
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  color: #1e313b;
+}
+.startDesign button:hover {
+  @include lightButtonHover;
+}
+@media screen and (max-width: 1024px) {
+  .startDesign > div {
+    padding: 60px 20px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .startDesign > div {
+    padding: 60px 10px;
+  }
+  .startDesign button {
+    font-size: 14px;
+  }
+}

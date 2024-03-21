@@ -1,0 +1,24 @@
+.slideMainDiscr {
+  font-size: 24px;
+  font-weight: 500;
+  // width: 727px;
+  margin: 0 auto 28px;
+}
+.slideContentBlock {
+  display: flex;
+  justify-content: center;
+}
+.sliderPhoto {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.memberName {
+  margin: 15px 0 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.memberPosition {
+  font-size: 16px;
+  font-weight: 500;
+}
