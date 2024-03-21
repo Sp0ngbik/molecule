@@ -1,0 +1,73 @@
+@import "../../styles/mixin";
+
+.headerMenu {
+  display: none;
+}
+.headerWrapper {
+  margin: 0 auto;
+  display: flex;
+  // display: none;
+  max-width: 1440px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+  height: 72px;
+  justify-content: space-between;
+  & button{
+    width: 93px;
+    font-size: 16px;
+    height: 42px;
+    background-color: #1e313b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    &:hover{
+      @include darkButtonHover;
+
+    }
+  }
+}
+
+.headerLinks {
+  display: flex;
+  & h2{
+    margin: 0 32px 0 0;
+    color: #1e313b;
+    font-size: 16px;
+    &:hover{
+      cursor: pointer;
+      color: #794eff;
+    }
+    &:last-child{
+      margin: 0;
+
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .headerLinks h2 {
+    margin: 0 10px;
+  }
+  .headerFirstSite {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .headerLinks {
+    display: none;
+  }
+  .headerMenu {
+    display: flex;
+  }
+  .headerWrapper {
+    padding: 0 10px 0;
+    & button{
+      margin: 0 0 0 20px;
+      width: 70px;
+      font-size: 12px;
+    }
+  }
+}
