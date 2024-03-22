@@ -1,90 +1,107 @@
 @import "../../styles/mixin";
+
 .secondContentBlock {
   padding: 128px 0;
-}
-.secondBlockMainContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
   align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
   max-width: 1440px;
-  grid-gap: 80px;
+  gap: 80px;
   width: 100%;
-  padding: 0 80px;
-  // max-height: 565px;
-  // height: 100%;
 }
+
 .secondContLeftBlock {
   margin: 62px 0 62px 0;
   width: 100%;
+  display: flex;
   object-fit: cover;
 }
-.secondContRightBlock h4 {
-  font-size: 16px;
-  line-height: 24px;
-}
+
+
 .secondContRightBlock {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  & {
+    h4 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
 }
+
 .secondRightUpBlock {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 0 0 30px 0;
+
+  & div {
+    @include labelContainer;
+    background-color: rgba(255, 193, 71, 0.6);
+    border: 2px solid #ffc147;
+  }
 }
-.secondRightUpBlock div {
-  @include labelContainer;
-  background-color: rgba(255, 193, 71, 0.6);
-  border: 2px solid #ffc147;
-}
+
 .secondRightTitle {
   font-size: 32px;
+
+  & span {
+    color: #ffc147;
+  }
 }
-.secondRightTitle span {
-  color: #ffc147;
-}
+
+
 .secBlockRightBottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 24px;
   grid-template-rows: 1fr 1fr;
-}
-.secBlockRightBottom h4 {
-  padding: 0 0 0 40px;
-  box-sizing: border-box;
-  width: 285px;
-}
-.titleBottomBlock {
-  display: flex;
-}
-.titleBottomBlock img {
-  padding: 0 16px 12px 0;
-}
-.titleBottomBlock span {
-  font-size: 18px;
-  font-weight: 500;
-  color: #ffc147;
-  padding: 0 0 12px 0;
-}
-@media screen and (max-width: 1024px) {
-  .secondBlockMainContent {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
-    grid-template-rows: 1fr 1fr;
+
+  & h4 {
+    padding: 0 0 0 40px;
+    box-sizing: border-box;
+    width: 285px;
   }
 }
+
+
+.titleBottomBlock {
+  display: flex;
+
+  & img {
+    padding: 0 16px 12px 0;
+  }
+
+  & span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffc147;
+    padding: 0 0 12px 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .secondContentBlock{
+    padding: 50px 20px;
+  }
+  .secondContLeftBlock {
+    display: none;
+  }
+
+  .secondBlockMainContent {
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
 @media screen and (max-width: 540px) {
   .secBlockRightBottom {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
-  .secondContRightBlock {
-    grid-template-rows: 1fr;
-    padding: 0 0 40px 0;
-  }
-  .secondBlockMainContent {
-    grid-gap: 0;
-    grid-template-rows: 1fr;
-  }
+
 }

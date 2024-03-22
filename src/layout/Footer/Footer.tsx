@@ -33,12 +33,12 @@ const Footer = () => {
                         />
                     </div>
                 </div>
-                <div className={style.footerBottom}>
+                <div className={style.footerRights}>
                     <div>
                         © Molecule, LLC. All rights reserved. Powered by
                         <span> Webflow .</span>
                     </div>
-                    <div className={style.politicsEtc}>
+                    <div >
                         <span>Licensing</span>
                         <span>Privacy Policy</span>
                         <span>Terms & conditions</span>

@@ -1,42 +1,35 @@
 @import "../../styles/mixin";
 
 
-.upContentBlock {
+.produceSection {
   position: relative;
   background-color: #1e313b;
   width: 100%;
-  height: 100%;
 }
-
-.mainBlock {
+.produceTextWrapper
+ {
   background-color: #1e313b;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.mainContent {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 130px 56px 100px 80px;
-  display: grid;
+  display: flex;
   justify-items: center;
   max-width: 1440px;
+  align-items: center;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
-  height: 100%;
 }
 
 .mainContentLeftBlock {
-  box-sizing: border-box;
   width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #fff;
   text-align: left;
+  word-wrap: normal;
 }
 
-.leftBlockHeadText {
+.contentHeadText {
   font-size: 38px;
   line-height: 44px;
 
@@ -45,27 +38,31 @@
   }
 }
 
-.leftBlocDiscr {
+.contentDescription {
   padding: 13px 0 29px 0;
   font-size: 18px;
   width: 575px;
   line-height: 27px;
 }
 
-.leftBlockInput {
+.produceSignUp {
+  display: flex;
   & input {
     padding: 10px 0 10px 21px;
     width: 364px;
     height: 22px;
     border-radius: 6px;
     margin: 0 16px 16px 0;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
 
     &::-webkit-input-placeholder {
       color: black;
     }
-    & :focus{
-      border: none;
-    }
+
   }
 
   & button {
@@ -81,34 +78,34 @@
   }
 }
 
-.signDiscr div {
-  font-family: Roboto, serif;
+.produceSignUp {
+  & div {
+    font-family: Roboto, serif;
 
-  font-size: 12px;
+    font-size: 12px;
+  }
+  & span {
+    color: #794eff;
+  }
 }
 
-.signDiscr span {
-  color: #794eff;
-}
 
-.mainContentRightBlock {
+.produceImage {
   object-fit: cover;
   width: 100%;
   max-width: 716px;
-  // height: 100%;
 
   margin: 0 0 0 10px;
-  max-height: 618px;
 }
 
-.usage {
+.sponsorsUsage {
   width: 100%;
   text-align: center;
   color: #fff;
   font-size: 18px;
 }
 
-.sponsorImgBlock {
+.sponsors {
   display: flex;
   margin: 0 auto;
   padding: 62px 161px 80px;
@@ -116,50 +113,42 @@
   justify-content: space-between;
 }
 
-//.sponsorImgBlock {
-//  flex-direction: column;
-//  align-items: center;
-//}
-//.sponsorImgBlock img {
-//  width: 100px;
-//  margin: 15px;
-//}
 @media screen and (max-width: 1024px) {
-  .mainContent {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+  .produceTextWrapper
+ {
     padding: 0 20px;
   }
-  .mainContentRightBlock {
-    grid-row: 1/1;
-    width: 100%;
+  .mainContentLeftBlock{
+    margin: 20px auto;
   }
-  .sponsorImgBlock {
-    padding: 0;
+  .produceImage {
+    display: none;
+  }
+  .sponsors {
+    padding: 0 20px;
     align-items: center;
-  }
-  .sponsorImgBlock img {
-    width: 100px;
-    margin: 15px;
+    & img {
+      margin: 10px;
+    }
   }
 }
 
 @media screen and (max-width: 540px) {
-  .mainContentRightBlock {
-    width: 50%;
-    align-self: center;
-    margin: 0 auto;
-  }
-  .leftBlocDiscr {
-    width: 50%;
-  }
-  .leftBlockInput input {
-    width: 265px;
-  }
-  .leftBlockInput {
-    margin: 40px 0;
+
+  .produceSignUp {
+    margin: 10px 0;
+    & input {
+      width: 265px;
+      margin: 0 16px 0 0;
+    }
   }
   .mainContentLeftBlock {
     width: 100%;
   }
+  .sponsors {
+    padding: 0 20px;
+    align-items: center;
+    & img {
+      margin: 5px;
+    }}
 }

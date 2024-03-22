@@ -4,10 +4,9 @@ import {firstSiteConfig} from "../../utils/imageConfig.ts";
 const Features = () => {
     return (
         <section className={style.secondContentBlock}>
-            <div className={style.secondBlockMainContent}>
-                <div>
+                <div className={style.secondContLeftBlock}>
                     <img
-                        className={style.secondContLeftBlock}
+                        // className={style.secondContLeftBlock}
                         src={firstSiteConfig.secondBlockImg}
                         alt="secondBlock png not found"
                     />
@@ -83,7 +82,6 @@ const Features = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
     );
 };

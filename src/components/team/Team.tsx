@@ -3,8 +3,8 @@ import {firstSiteConfig} from "../../utils/imageConfig.ts";
 
 const Team = () => {
     return (
-        <section className={style.teamInfo}>
-            <div className={style.teamInfoLeftBlock}>
+        <section className={style.teamSection}>
+            <div className={style.teamInfo}>
                 <h4>Team</h4>
                 <h3>
                     Meet the <span>talented team</span> behind the molecule SaaS
@@ -19,7 +19,7 @@ const Team = () => {
                 <button>Meet the team</button>
             </div>
             <div className={style.teamImages}>
-                <div className={style.teamImageFirstBlock}>
+                <div>
                     <img
                         src={firstSiteConfig.teamImage1}
                         alt="teamImage1 not found"
@@ -29,7 +29,7 @@ const Team = () => {
                         alt="teamImage2 not found"
                     />
                 </div>
-                <div className={style.teamImageSecondBlock}>
+                <div>
                     <img
                         src={firstSiteConfig.teamImage3}
                         alt="teamImage3 not found"

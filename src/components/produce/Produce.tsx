@@ -3,41 +3,39 @@ import {firstSiteConfig} from "../../utils/imageConfig.ts";
 
 const Produce = () => {
     return (
-        <section className={style.upContentBlock}>
-            <div className={style.mainBlock}>
-                <div className={style.mainContent}>
+        <section className={style.produceSection}>
+                <div className={style.produceTextWrapper}>
                     <div className={style.mainContentLeftBlock}>
-                        <div className={style.leftBlockHeadText}>
+                        <div className={style.contentHeadText}>
                             Molecule is a SaaS marketing template that's
                             <span> easy to modify</span>.
                         </div>
-                        <div className={style.leftBlocDiscr}>
+                        <div className={style.contentDescription}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Suspendisse varius enim in eros elementum tristique. Duis
                             cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                             commodo diam libero vitae erat.
                         </div>
-                        <div className={style.leftBlockInput}>
-                            <input placeholder="Enter your email"/>
+                        <div className={style.produceSignUp}>
+                            <input placeholder="Enter your email" type={'email'}/>
                             <button>Sign up</button>
                         </div>
-                        <div className={style.signDiscr}>
+                        <div className={style.produceSignUp}>
                             By clicking Sign Up you're confirming that you agree with our
-                            <span> Terms and Conditions</span>.
+                            <span>&nbsp;Terms and Conditions</span>
                         </div>
                     </div>
                     <img
-                        className={style.mainContentRightBlock}
+                        className={style.produceImage}
                         src={firstSiteConfig.frame}
                         alt="frame not found"
                     />
                 </div>
-            </div>
             <div >
-                <div className={style.usage}>
+                <div className={style.sponsorsUsage}>
                     Used by the leading SaaS companies of tomorrow.
                 </div>
-                <div className={style.sponsorImgBlock}>
+                <div className={style.sponsors}>
                     <img
                         src={firstSiteConfig.mainBlockImg1}
                         alt="mainBlockImg1 not found"

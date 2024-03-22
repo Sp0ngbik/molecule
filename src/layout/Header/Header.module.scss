@@ -1,20 +1,16 @@
 @import "../../styles/mixin";
 
-.headerMenu {
-  display: none;
-}
 .headerWrapper {
   margin: 0 auto;
   display: flex;
-  // display: none;
   max-width: 1440px;
-  padding: 0 20px;
+  padding: 20px 20px;
   box-sizing: border-box;
   width: 100%;
   align-items: center;
-  height: 72px;
   justify-content: space-between;
-  & button{
+
+  & button {
     width: 93px;
     font-size: 16px;
     height: 42px;
@@ -22,7 +18,8 @@
     color: #fff;
     border: none;
     border-radius: 6px;
-    &:hover{
+
+    &:hover {
       @include darkButtonHover;
 
     }
@@ -31,15 +28,18 @@
 
 .headerLinks {
   display: flex;
-  & h2{
+
+  & h2 {
     margin: 0 32px 0 0;
     color: #1e313b;
     font-size: 16px;
-    &:hover{
+
+    &:hover {
       cursor: pointer;
       color: #794eff;
     }
-    &:last-child{
+
+    &:last-child {
       margin: 0;
 
     }
@@ -57,12 +57,11 @@
     padding: 0 10px;
   }
 }
+
 @media screen and (max-width: 540px) {
-
-
   .headerWrapper {
-    padding: 0 10px 0;
-    & button{
+    padding: 10px;
+    & button {
       margin: 0 0 0 20px;
       width: 70px;
       font-size: 12px;

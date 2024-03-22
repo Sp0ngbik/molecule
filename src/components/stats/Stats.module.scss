@@ -1,62 +1,62 @@
 @import "../../styles/mixin";
-.teamStats {
+
+.statsSection {
   width: 100%;
   height: 100%;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
 }
 
-.stats {
-  background-color: #f6f6f6;
-  width: 100%;
-   //height: 490px;
-}
+
 .statsContent {
   padding: 128px 80px;
+  box-sizing: border-box;
   margin: 0 auto;
-  display: grid;
-  grid-gap: 116px;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  gap: 116px;
   max-width: 1440px;
 }
-.statsLeftBlock > h4 {
-  @include labelContainer;
-  border: 2px solid #97e747;
-  background-color: rgba(151, 231, 71, 0.6);
+
+.statsPreview {
+  & h4 {
+    @include labelContainer;
+    border: 2px solid #97e747;
+    background-color: rgba(151, 231, 71, 0.6);
+  }
+  & div {
+    font-size: 32px;
+    & span {
+      color: #97e747;
+    }
+  }
 }
-.statsLeftBlock h3 {
-  font-size: 32px;
-}
-.statsLeftBlock h3 span {
-  color: #97e747;
-}
-.statsRightBlock {
-  display: grid;
-  grid-template-rows: 0.5fr 1fr;
-}
-.statsRightBlock div {
+
+.statsDescription div {
   font-size: 18px;
 }
+
 .statsPercent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  & h3 {
+    margin: 0;
+    font-size: 48px;
+    color: #97e747;
+  }
 }
-.statsPercent h3 {
-  margin: 0;
-  font-size: 48px;
-  color: #97e747;
-}
+
 @media screen and (max-width: 1024px) {
   .stats {
     width: fit-content;
     display: flex;
   }
-  .teamStats {
+  .statsSection {
     display: flex;
     flex-direction: column;
   }
   .statsContent {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 10px 20px;
+    gap: 50px;
+    flex-direction: column;
+    padding: 50px 20px;
   }
 }

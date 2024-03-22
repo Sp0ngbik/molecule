@@ -58,6 +58,9 @@
   border-radius: 6px;
   border: 1px solid #000;
   margin: 0 16px 16px 0;
+  &:focus{
+    outline: none;
+  }
 }
 .rightMissDiscr > div {
   font-weight: 500;

@@ -28,7 +28,6 @@ const MoleculeMain = () => {
                 <NonMiss/>
                 <Blog/>
                 <StartLabel/>
-
             </main>
             <Footer/>
         </div>
