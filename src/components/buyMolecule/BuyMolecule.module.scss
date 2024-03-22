@@ -1,49 +1,59 @@
 @import "../../styles/mixin";
-.buyRequest {
+
+.buySection {
   background-color: #1e313b;
   width: 100%;
-  height: 615px;
+  //height: 615px;
+  box-sizing: border-box;
   display: flex;
+  padding: 50px 20px;
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  & div {
+    width: 100%;
+    max-width: 768px;
+  }
+
+  & img {
+    padding: 0 0 20px 0;
+  }
+
+  & h2 {
+    font-size: 32px;
+    color: #fff;
+  }
+
+  & h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 0 0 29px 0;
+  }
 }
 
-.buyRequest > div {
-  width: 100%;
-  max-width: 768px;
-}
-.buyRequest img {
-  padding: 0 0 20px 0;
-}
-.buyRequest h2 {
-  font-size: 32px;
-  color: #fff;
-}
-.buyRequest h3 {
-  font-size: 18px;
-  font-weight: 400;
-  color: #fff;
-  padding: 0 0 29px 0;
-}
-.buyRequest_buttonBlock button:first-child {
-  width: 132px;
-  height: 42px;
-  color: #fff;
-  background-color: #794eff;
-  border-radius: 6px;
-  margin: 0 16px 0 0;
-  border: none;
-}
-.buyRequest_buttonBlock button:first-child:hover {
-  @include purpleButtonHover;
-}
-.buyRequest_buttonBlock button:last-child {
-  width: 112px;
-  height: 42px;
-  border-radius: 6px;
-  border: none;
-}
-.buyRequest_buttonBlock button:last-child:hover {
-  @include lightButtonHover;
+
+.buyRequest_buttonBlock button {
+  &:first-child {
+    width: 110px;
+    height: 42px;
+    color: #fff;
+    background-color: #794eff;
+    border-radius: 6px;
+    margin: 0 16px 0 0;
+    border: none;
+    &:hover {
+      @include purpleButtonHover;
+    }
+  }
+  &:last-child {
+    width: 110px;
+    height: 42px;
+    border-radius: 6px;
+    border: none;
+    &:hover {
+      @include lightButtonHover;
+    }
+  }
 }

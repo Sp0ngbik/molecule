@@ -23,10 +23,9 @@ const Slider = () => {
     }
 
     return (
-        <section className={style.creators}>
-            <div className={style.creatorsDescription}>
+        <section className={style.sliderSection}>
                 <img
-                    className={style.slideLogoDiscr}
+                    className={style.sliderLogo}
                     src={firstSiteConfig.chillIndImg}
                     alt="ChillInd not found"
                 />
@@ -54,7 +53,6 @@ const Slider = () => {
                                               className={sliderState === slide.id ? style.dotActive : ''}
                                               onClick={() => setSliderState(slide.id)}></button>)}
                 </div>
-            </div>
         </section>
     );
 };

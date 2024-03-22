@@ -3,8 +3,8 @@ import {firstSiteConfig} from "../../utils/imageConfig.ts";
 
 const Process = () => {
     return (
-        <section className={style.stepsToBuild}>
-            <div className={style.stepsToBuild_leftBlock}>
+        <section className={style.processSection}>
+            <div className={style.processDescription}>
                 <div>Process</div>
                 <span>
               What steps are required to build a SaaS marketing site using the
@@ -13,8 +13,9 @@ const Process = () => {
                 <button>Get molecule</button>
             </div>
             <div >
-                <div className={style.stepsRightBlockImages}>
-                    <div className={style.rightBlockImage}>
+                <div className={style.processStepsWrapper}>
+                    <div className={style.stepsLine}></div>
+                    <div className={style.processStep}>
                         <img
                             src={firstSiteConfig.stepsImages1}
                             alt="stepsImages1 not found"
@@ -27,7 +28,8 @@ const Process = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={style.rightBlockImage}>
+
+                    <div className={style.processStep}>
                         <img
                             src={firstSiteConfig.stepsImages2}
                             alt="stepsImages2 not found"
@@ -40,7 +42,7 @@ const Process = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={style.rightBlockImage}>
+                    <div className={style.processStep}>
                         <img
                             src={firstSiteConfig.stepsImages3}
                             alt="stepsImages3 not found"

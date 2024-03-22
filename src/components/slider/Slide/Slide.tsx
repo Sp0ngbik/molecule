@@ -8,10 +8,10 @@ type SlideProps = {
 const Slide = ({slide}: SlideProps) => {
     return (
         <div >
-            <div className={style.slideMainDiscr}>
+            <div className={style.sliderSpeech}>
                 {slide.speech}
             </div>
-            <div className={style.slideContentBlock}>
+            <div className={style.slideContent}>
                 <img
                     className={style.sliderPhoto}
                     src={slide.img}

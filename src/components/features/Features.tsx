@@ -3,18 +3,17 @@ import {firstSiteConfig} from "../../utils/imageConfig.ts";
 
 const Features = () => {
     return (
-        <section className={style.secondContentBlock}>
-                <div className={style.secondContLeftBlock}>
+        <section className={style.featureSection}>
+                <div className={style.featureImage}>
                     <img
-                        // className={style.secondContLeftBlock}
                         src={firstSiteConfig.secondBlockImg}
                         alt="secondBlock png not found"
                     />
                 </div>
-                <div className={style.secondContRightBlock}>
-                    <div className={style.secondRightUpBlock}>
+                <div className={style.featureDescription}>
+                    <div className={style.descriptionTitle}>
                         <div>Features</div>
-                        <h3 className={style.secondRightTitle}>
+                        <h3 className={style.descriptionSubtitle}>
                             See how easy it is to <span>edit Molecule</span> to your
                             liking.
                         </h3>
@@ -25,23 +24,23 @@ const Features = () => {
                             commodo diam libero vitae erat.
                         </h4>
                     </div>
-                    <div className={style.secBlockRightBottom}>
+                    <div className={style.featureBlockWrapper}>
                         <div>
-                            <div className={style.titleBottomBlock}>
+                            <div className={style.featureBlock}>
                                 <img
                                     src={firstSiteConfig.blockImg1}
                                     alt="blockimg1 not found"
                                 />
                                 <span>Pages you'll use</span>
                             </div>
-                            <div className={style.titleBottomBlock}></div>
+                            <div className={style.featureBlock}></div>
                             <h4>
                                 Molecule doesn't come with 200+ page layout — it comes with
                                 the pages yo'll actually use.
                             </h4>
                         </div>
                         <div>
-                            <div className={style.titleBottomBlock}>
+                            <div className={style.featureBlock}>
                                 <img
                                     src={firstSiteConfig.blockImg2}
                                     alt="blockimg2 not found"
@@ -55,7 +54,7 @@ const Features = () => {
                             </h4>
                         </div>
                         <div>
-                            <div className={style.titleBottomBlock}>
+                            <div className={style.featureBlock}>
                                 <img
                                     src={firstSiteConfig.blockImg3}
                                     alt="blockimg3 not found"
@@ -68,7 +67,7 @@ const Features = () => {
                             </h4>
                         </div>
                         <div>
-                            <div className={style.titleBottomBlock}>
+                            <div className={style.featureBlock}>
                                 <img
                                     src={firstSiteConfig.blockImg4}
                                     alt="blockimg4 not found"

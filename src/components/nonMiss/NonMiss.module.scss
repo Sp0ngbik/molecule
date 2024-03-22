@@ -1,92 +1,103 @@
 @import "../../styles/mixin";
-.nonMissMessage {
+
+.nonMissSection {
   display: flex;
   width: 100%;
-  height: 443px;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
   background-color: #794eff;
 }
+
 .nonMissBlock {
-  padding: 0 96px;
-  display: grid;
+  margin: 30px 0;
+  padding: 100px 96px;
+  display: flex;
   align-items: center;
   justify-items: flex-start;
-  grid-template-columns: 1fr 1fr;
   border-radius: 48px;
   max-width: 1280px;
   width: 100%;
-  height: 315px;
   grid-gap: 80px;
   background-color: #fff;
 }
-.leftMissBlock {
+
+.nonMissMessage {
   width: 540px;
   display: grid;
   grid-template-rows: 1fr 1fr;
-}
-.leftMissBlock h5 {
-  font-size: 32px;
-  margin: 0 0 10px 0;
-}
-.leftMissBlock div {
-  font-size: 16px;
-  font-weight: 500;
-}
-.rightMissBlock input::-webkit-input-placeholder {
-    color: black;
+
+  & h5 {
+    font-size: 32px;
+    margin: 0 0 10px 0;
   }
-  .rightMissBlock button {
+
+  & div {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.nonMissSignUp {
+  display: flex;
+  flex-direction: column;
+  & button {
     width: 88px;
     height: 44px;
     background-color: #1e313b;
     color: #fff;
+    margin-bottom: 10px;;
     border: none;
     border-radius: 6px;
+
+    :hover {
+      @include darkButtonHover;
+    }
   }
-  .rightMissBlock button:hover {
-    @include darkButtonHover;
-  }
-  .rightMissBlock {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
-.rightMissBlock input {
-  padding: 10px 0 10px 21px;
-  width: 364px;
-  height: 22px;
-  border-radius: 6px;
-  border: 1px solid #000;
-  margin: 0 16px 16px 0;
-  &:focus{
-    outline: none;
+
+  & input {
+    padding: 10px 0 10px 21px;
+    height: 22px;
+    width: 65%;
+    border-radius: 6px;
+    border: 1px solid #000;
+    margin: 0 16px 16px 0;
+
+    &::-webkit-input-placeholder {
+      color: black;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
-.rightMissDiscr > div {
-  font-weight: 500;
-  font-size: 12px;
+
+.signUpDescription {
+  & > div {
+    font-weight: 500;
+    font-size: 12px;
+  }
+  & span {
+    margin: 0 0 0 5px;
+    color: #794eff;
+  }
 }
-.rightMissDiscr span {
-  margin: 0 0 0 5px;
-  color: #794eff;
-}
+
+
 @media screen and (max-width: 1024px) {
-  .nonMissMessage {
+  .nonMissSection {
     padding: 0 20px;
   }
   .nonMissBlock {
-    grid-template-columns: 1fr;
-    padding: 20px 20px;
+    flex-direction: column;
+    padding: 50px 20px;
   }
 }
+
 @media screen and (max-width: 540px) {
-  .nonMissBlock {
-    height: 415px;
-  }
-  .leftMissBlock {
+  .nonMissMessage {
     width: 100%;
-  }
-  .rightMissBlock input {
-    width: 265px;
   }
 }

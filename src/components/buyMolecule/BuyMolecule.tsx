@@ -3,7 +3,7 @@ import {firstSiteConfig} from "../../utils/imageConfig.ts";
 
 const BuyMolecule = () => {
     return (
-        <section className={style.buyRequest}>
+        <section className={style.buySection}>
             <div>
                 <img src={firstSiteConfig.bigLogo} alt="bitLogo not found"/>
                 <h2>Think you've seen enough?</h2>

@@ -24,8 +24,10 @@
     border: 2px solid #97e747;
     background-color: rgba(151, 231, 71, 0.6);
   }
+
   & div {
     font-size: 32px;
+
     & span {
       color: #97e747;
     }
@@ -38,18 +40,19 @@
 
 .statsPercent {
   display: flex;
+
   & h3 {
     margin: 0;
     font-size: 48px;
     color: #97e747;
   }
+
+  & div:first-child {
+    margin-right: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-  .stats {
-    width: fit-content;
-    display: flex;
-  }
   .statsSection {
     display: flex;
     flex-direction: column;

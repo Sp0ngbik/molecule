@@ -1,7 +1,7 @@
 import style from './StartLabel.module.scss'
 const StartLabel = () => {
     return (
-        <section className={style.startDesign}>
+        <section className={style.startDesignSection}>
             <div>
                 <div>
                     <h3>Ready to start designing?</h3>

@@ -1,10 +1,13 @@
-.creators {
+.sliderSection {
   position: relative;
   width: 100%;
   background-color: #f6f6f6;
+  padding: 128px 80px 192px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-.slideLogoDiscr {
+.sliderLogo {
   margin: 0 0 34px 0;
 }
 
@@ -20,18 +23,14 @@
 .arrowsSlider_forward{
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 45%;
+  top: 46%;
   right: 10%;
   &:hover {
     cursor: pointer;
   }
 }
 
-.creatorsDescription {
-  padding: 128px 80px 192px;
-  text-align: center;
 
-}
 
 .sliderDots {
   display: flex;
@@ -54,4 +53,9 @@
   &:hover {
     cursor: pointer;
   }
+}
+@media screen and (max-width: 540px) {
+  .sliderSection {
+
+  padding: 50px 60px}
 }
