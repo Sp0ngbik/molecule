@@ -10,19 +10,26 @@
   align-items: center;
   justify-content: space-between;
 
-  & button {
-    width: 93px;
-    font-size: 16px;
-    height: 42px;
-    background-color: #1e313b;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
 
-    &:hover {
-      @include darkButtonHover;
+  & .buttonBlock {
+    & button {
+      width: 93px;
+      font-size: 16px;
+      height: 42px;
+      background-color: #1e313b;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
 
+      &:hover {
+        @include darkButtonHover;
+      }
     }
+
+  }
+
+  & .sideBarButton {
+    display: none;
   }
 }
 
@@ -47,24 +54,89 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .headerMenu {
-    display: flex;
+  .blackOut {
+    position: absolute;
+    z-index: 88;
+    background-color: rgba(0, 0, 0, 0.17);
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    transition: 1s linear;
+
+    & .sideBarMenu {
+      right: 0;
+      display: flex;
+      text-align: center;
+      position: absolute;
+      z-index: 99;
+      flex-direction: column;
+      border: 2px solid #1e313b;
+      width: 25%;
+      height: 300px;
+      background-color: #ffffff;
+      align-items: flex-start;
+      color: #1e313b;
+
+      & div {
+        margin: 20px auto;
+
+        & h2 {
+          margin: 5px 0;
+        }
+      }
+
+      & button {
+        color: #1e313b;
+        background-color: inherit;
+        border: none;
+        font-size: 20px;
+        margin: 5px 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
-  .headerLinks {
-    display: none;
+  .headerWrapper {
+
+    & button {
+      &:last-child {
+        margin-left: 10px;
+      }
+
+    }
+
+    & .sideBarButton {
+      display: initial;
+    }
   }
-  .headerFirstSite {
-    padding: 0 10px;
-  }
+.headerMenu {
+  display: flex;
 }
+
+.headerLinks {
+  display: none;
+}
+
+.headerFirstSite {
+  padding: 0 10px;
+}
+}
+
+
 
 @media screen and (max-width: 540px) {
   .headerWrapper {
+    flex-direction: column;
     padding: 10px;
+
     & button {
-      margin: 0 0 0 20px;
+      margin: 20px 0 0 20px;
       width: 70px;
       font-size: 12px;
     }
   }
 }
+
